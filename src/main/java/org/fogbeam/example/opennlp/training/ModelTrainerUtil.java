@@ -12,6 +12,11 @@ import opennlp.tools.util.model.BaseModel;
 public class ModelTrainerUtil {
     private static final Logger LOGGER = Logger.getLogger(ModelTrainerUtil.class.getName());
 
+    // Private constructor to hide the implicit public one
+    private ModelTrainerUtil() {
+        throw new UnsupportedOperationException("Utility class");
+    }
+
     public static void saveModel(BaseModel model, String modelFilePath) {
         if (model != null) {
             try (OutputStream modelOut = new BufferedOutputStream(new FileOutputStream(modelFilePath))) {
