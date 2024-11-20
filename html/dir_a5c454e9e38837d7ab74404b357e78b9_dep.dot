@@ -1,0 +1,16 @@
+digraph "C:/Users/13pedro/OneDrive/ULL/Programación/LAB/opennlp-demo_LABp05/src/main/java"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_44de67401fd063476a44b331498cf930 {
+    graph [ bgcolor="#edf0f7", pencolor="grey50", label="main", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_44de67401fd063476a44b331498cf930.html",tooltip=""]
+  subgraph clusterdir_a5c454e9e38837d7ab74404b357e78b9 {
+    graph [ bgcolor="#edf0f7", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_a5c454e9e38837d7ab74404b357e78b9.html",tooltip=""]
+    dir_a5c454e9e38837d7ab74404b357e78b9 [shape=plaintext, label="java"];
+  dir_e012f4c4b1e6be8b3c6e2daf74a8a19e [label="org", fillcolor="#a2b4d6", color="grey25", style="filled", URL="dir_e012f4c4b1e6be8b3c6e2daf74a8a19e.html",tooltip=""];
+  }
+  }
+}

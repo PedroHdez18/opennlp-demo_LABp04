@@ -1,0 +1,7 @@
+<map id="org.fogbeam.example.opennlp.training.ModelTrainerUtil.saveModel" name="org.fogbeam.example.opennlp.training.ModelTrainerUtil.saveModel">
+<area shape="rect" id="Node000001" title=" " alt="" coords="299,39,544,81"/>
+<area shape="rect" id="Node000002" href="$classorg_1_1fogbeam_1_1example_1_1opennlp_1_1training_1_1_document_classifier_trainer.html#ad740f4a3bd9a068afd18c2be85deba75" title=" " alt="" coords="5,5,251,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="283,47,251,43,251,38,284,42"/>
+<area shape="rect" id="Node000003" href="$classorg_1_1fogbeam_1_1example_1_1opennlp_1_1training_1_1_part_of_speech_tagger_trainer.html#a7dbb23d74b570716df727c4b618ac083" title=" " alt="" coords="5,72,251,115"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="284,78,251,82,251,77,283,73"/>
+</map>
