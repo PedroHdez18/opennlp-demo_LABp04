@@ -16,27 +16,31 @@ import opennlp.tools.tokenize.TokenizerModel;
 
 public class TokenizerMain {
 	public static void main(String[] args) throws Exception {
-		if (args.length != 3) {
-			System.out.println("Uso: java TokenizerMain <modelo> <archivo_entrada> <archivo_salida>");
+		if (args.length < 3) {
+			System.out.println("Uso: java TokenizerMain <modelo> <salida> <archivo1> <archivo2> ...");
 			return;
 		}
 
-		// Ruta del modelo, archivo de entrada y salida
+		// Ruta del modelo y archivo de salida
 		String modelPath = args[0];
-		String inputFilePath = args[1];
-		String outputFilePath = args[2];
+		String outputPath = args[1];
+		String[] inputFiles = Arrays.copyOfRange(args, 2, args.length);
 
 		// Cargar el modelo
 		try (InputStream modelIn = new FileInputStream(modelPath)) {
 			TokenizerModel model = new TokenizerModel(modelIn);
 			Tokenizer tokenizer = new TokenizerME(model);
 
-			// Leer el archivo de entrada y obtener los tokens
-			List<String> tokens = tokenizeFile(inputFilePath, tokenizer);
+			// Procesar los archivos de entrada
+			List<String> tokens = new ArrayList<>();
+			for (String filePath : inputFiles) {
+				System.out.println("Procesando archivo: " + filePath);
+				tokens.addAll(tokenizeFile(filePath, tokenizer));
+			}
 
 			// Escribir los tokens en el archivo de salida
-			writeTokensToFile(tokens, outputFilePath);
-			System.out.println("Tokens escritos en: " + outputFilePath);
+			writeTokensToFile(tokens, outputPath);
+			System.out.println("Tokens escritos en: " + outputPath);
 		} catch (IOException e) {
 			System.err.println("Error al procesar: " + e.getMessage());
 			e.printStackTrace();
@@ -64,7 +68,7 @@ public class TokenizerMain {
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath))) {
 			for (String token : tokens) {
 				writer.write(token);
-				writer.newLine(); // Escribir cada token en una línea nueva
+				writer.write(" "); // Separar los tokens por espacios
 			}
 		}
 	}
