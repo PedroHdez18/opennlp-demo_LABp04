@@ -64,7 +64,7 @@ public class TokenizerMain {
 		try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputPath))) {
 			for (String token : tokens) {
 				writer.write(token);
-				writer.write(" "); // Separar los tokens por espacios
+				writer.newLine(); // Escribir cada token en una línea nueva
 			}
 		}
 	}
