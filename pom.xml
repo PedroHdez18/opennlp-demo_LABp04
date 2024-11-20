@@ -46,7 +46,6 @@
 				<artifactId>maven-pmd-plugin</artifactId>
 				<version>3.25.0</version>
 				<configuration>
-					<linkXref>true</linkXref>
 					<inputEncoding>utf-8</inputEncoding>
 					<minimumTokens>100</minimumTokens>
 					<targetJdk>1.5</targetJdk>
@@ -85,6 +84,11 @@
 				<plugin>
 					<artifactId>maven-clean-plugin</artifactId>
 					<version>3.4.0</version>
+				</plugin>
+				<plugin>
+					<groupId>org.sonarsource.scanner.maven</groupId>
+					<artifactId>sonar-maven-plugin</artifactId>
+					<version>3.9.0.2155</version>
 				</plugin>
 				<!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
 				<plugin>
