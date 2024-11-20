@@ -5,7 +5,7 @@
 	<artifactId>nlp-demo1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>P05-ControlVersiones Pedro Hernandez</name>
+	<name>P04-ControlVersiones Pedro Hernandez</name>
 
 	<dependencies>
 		<dependency>
